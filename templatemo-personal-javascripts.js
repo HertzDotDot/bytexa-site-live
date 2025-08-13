@@ -132,7 +132,7 @@ https://templatemo.com/tm-593-personal-shape
         //     }, 2000);
         // });
 
-        // Enhanced form submission with better UX and EmailJS integration
+// Enhanced form submission with better UX and EmailJS integration
 document.querySelector('.contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -189,7 +189,6 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
 });
 
 
-
         // Enhanced parallax effect for hero background
         let ticking = false;
         
@@ -226,4 +225,5 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
+
         });
