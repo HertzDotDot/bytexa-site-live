@@ -229,64 +229,63 @@ https://templatemo.com/tm-593-personal-shape
             </div>
         </div>
     </footer>
-<!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS with your public key
-        (function(){
-            emailjs.init("-7vrpuUKlKyH_MbT7"); // replace with your EmailJS public key
-        })();
-    </script>
+<!-- EmailJS SDK v4 -->
+<script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
 
-    <!-- Your custom contact form JS -->
-    <script>
-    document.querySelector('.contact-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
+  // Initialize EmailJS with your public key
+  emailjs.init("-7vrpuUKlKyH_MbT7");
 
-        const formData = {
-            email: form.querySelector('[name="email"]').value,
-            name: form.querySelector('[name="name"]').value,
-            subject: form.querySelector('[name="subject"]').value,
-            message: form.querySelector('[name="message"]').value
-        };
+  // Attach form submit handler
+  document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
 
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
+      const formData = {
+          email: form.querySelector('[name="email"]').value,
+          name: form.querySelector('[name="name"]').value,
+          subject: form.querySelector('[name="subject"]').value,
+          message: form.querySelector('[name="message"]').value
+      };
 
-        try {
-            await emailjs.send("service_beel3jj", "template_xkql6tv", formData);
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
 
-            submitBtn.textContent = 'Message Sent! ✓';
-            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-            submitBtn.style.transform = 'scale(1.05)';
+      try {
+          await emailjs.send("service_beel3jj", "template_xkql6tv", formData);
 
-            setTimeout(() => submitBtn.style.transform = 'scale(1)', 200);
+          submitBtn.textContent = 'Message Sent! ✓';
+          submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          submitBtn.style.transform = 'scale(1.05)';
 
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-                form.reset();
-            }, 3000);
+          setTimeout(() => submitBtn.style.transform = 'scale(1)', 200);
 
-        } catch (error) {
-            console.error('EmailJS Error:', error);
-            submitBtn.textContent = 'Error! ✗';
-            submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+          setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              submitBtn.style.background = '';
+              form.reset();
+          }, 3000);
 
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 3000);
-        }
-    });
-    </script>
+      } catch (error) {
+          console.error('EmailJS Error:', error);
+          submitBtn.textContent = 'Error! ✗';
+          submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+
+          setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+              submitBtn.style.background = '';
+          }, 3000);
+      }
+  });
+</script>
+
 <script src="templatemo-personal-javascripts.js"></script>
 
 </body>
+
 </html>
