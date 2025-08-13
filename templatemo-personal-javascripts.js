@@ -227,3 +227,71 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
             }
 
         });
+// ================================================================
+// EmailJS Form Submission
+// This entire block handles the contact form functionality.
+// ================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize EmailJS with your Public Key
+    // NOTE: This public key must be defined in your EmailJS account.
+    emailjs.init("-7vrpuUKlKyH_MbT7");
+
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+
+            // Collect form data
+            const formData = {
+                email: form.querySelector('[name="email"]').value,
+                name: form.querySelector('[name="name"]').value,
+                subject: form.querySelector('[name="subject"]').value,
+                message: form.querySelector('[name="message"]').value
+            };
+
+            // Apply loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
+
+            try {
+                // Send the email using EmailJS
+                // NOTE: Replace "service_id" and "template_id" with your actual IDs from EmailJS.
+                await emailjs.send("service_beel3jj", "template_xkql6tv", formData);
+
+                // Success state
+                submitBtn.textContent = 'Message Sent! ✓';
+                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                submitBtn.style.transform = 'scale(1.05)';
+
+                setTimeout(() => {
+                    submitBtn.style.transform = 'scale(1)';
+                }, 200);
+
+                // Reset button and form after a delay
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    form.reset();
+                }, 3000);
+
+            } catch (error) {
+                console.error('EmailJS Error:', error);
+
+                // Error state
+                submitBtn.textContent = 'Error! ✗';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+        });
+    }
+});
