@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Main Home Page -->
+    <url>
+        <loc>https://www.bytexa.net/</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Section -->
+    <url>
+        <loc>https://www.bytexa.net/#about</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Project Section -->
+    <url>
+        <loc>https://www.bytexa.net/#project</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://www.bytexa.net/#contact</loc>
+        <lastmod>2025-08-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
