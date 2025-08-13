@@ -227,14 +227,15 @@ document.querySelector('.contact-form').addEventListener('submit', async (e) => 
             }
 
         });
+// NOTE: This public key must be defined in your EmailJS account.
+    emailjs.init("-7vrpuUKlKyH_MbT7");
 // ================================================================
 // EmailJS Form Submission
 // This entire block handles the contact form functionality.
 // ================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize EmailJS with your Public Key
-    // NOTE: This public key must be defined in your EmailJS account.
-    emailjs.init("-7vrpuUKlKyH_MbT7");
+ 
+    
 
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
@@ -295,3 +296,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
