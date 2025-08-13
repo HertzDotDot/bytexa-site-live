@@ -229,11 +229,11 @@ https://templatemo.com/tm-593-personal-shape
             </div>
         </div>
     </footer>
-<!-- EmailJS SDK v4 -->
-<script type="module">
-  import * as emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+<!-- EmailJS SDK (plain script, no module) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  // Initialize EmailJS with your public key
+<script>
+  // Initialize EmailJS
   emailjs.init("-7vrpuUKlKyH_MbT7");
 
   // Attach form submit handler
@@ -289,4 +289,5 @@ https://templatemo.com/tm-593-personal-shape
 </body>
 
 </html>
+
 
