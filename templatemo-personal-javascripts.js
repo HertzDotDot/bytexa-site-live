@@ -1,16 +1,5 @@
-/*
-
-TemplateMo 593 personal shape
-
-https://templatemo.com/tm-593-personal-shape
-
-*/
-
 // JavaScript Document
 
-// ================================================================
-// EmailJS Initialization - This goes at the very top of your file.
-// ================================================================
 // NOTE: This public key must be defined in your EmailJS account.
 emailjs.init("-7vrpuUKlKyH_MbT7");
 
@@ -212,3 +201,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
