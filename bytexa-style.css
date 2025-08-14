@@ -767,27 +767,27 @@
         }
 
         .Project-item:nth-child(1) .Project-image {
-            background-image: url('images/working-business-women.jpg');
+            background-image: url('images/working-business-women.webp');
         }
 
         .Project-item:nth-child(2) .Project-image {
-            background-image: url('images/computer-desk-stickers.jpg');
+            background-image: url('images/computer-desk-stickers.webp');
         }
 
         .Project-item:nth-child(3) .Project-image {
-            background-image: url('images/curved-display-pinky-girl.jpg');
+            background-image: url('images/curved-display-pinky-girl.webp');
         }
 
         .Project-item:nth-child(4) .Project-image {
-            background-image: url('images/dashboard-interfaces-transparent-displays.jpg');
+            background-image: url('images/dashboard-interfaces-transparent-displays.webp');
         }
 
         .Project-item:nth-child(5) .Project-image {
-            background-image: url('images/marketing-strategy-women.jpg');
+            background-image: url('images/marketing-strategy-women.webp');
         }
 
         .Project-item:nth-child(6) .Project-image {
-            background-image: url('images/portfolio-website-girl.jpg');
+            background-image: url('images/portfolio-website-girl.webp');
         }
 
         .Project-image::before {
@@ -1198,4 +1198,5 @@
                 padding: 0 1rem;
             }
         }
+
 
