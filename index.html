@@ -48,24 +48,40 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-            <div class="shape shape-6"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-subtitle">Solution Designer</div>
-            <h1>Transforming Ideas Into Intelligent Solutions</h1>
-            <p class="subtitle">I work with clients to design and set up network architectures and IP security systems that deliver secure and dependable solutions for their users</p>
-            <a href="#project" class="cta-button">Explore My Work</a>
-        </div>
-        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()"></div>
-    </section>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <!-- Hero Image for LCP -->
+    <img src="./images/hero.webp" 
+         srcset="./images/hero-480.webp 480w, ./images/hero-768.webp 768w, ./images/hero-1200.webp 1200w"
+         sizes="(max-width: 768px) 100vw, 1200px"
+         alt="Transforming Ideas Into Intelligent Solutions"
+         class="hero-image"
+         fetchpriority="high">
+
+    <!-- Floating shapes (CSS animated) -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+        <div class="hero-subtitle">Solution Designer</div>
+        <h1>Transforming Ideas Into Intelligent Solutions</h1>
+        <p class="subtitle">
+            I work with clients to design and set up network architectures and IP security systems 
+            that deliver secure and dependable solutions for their users.
+        </p>
+        <a href="#project" class="cta-button">Explore My Work</a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()"></div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -238,6 +254,7 @@
 </body>
 
 </html>
+
 
 
 
